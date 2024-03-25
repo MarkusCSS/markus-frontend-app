@@ -579,9 +579,13 @@ function navBtn(){
 
     
 
-setInterval(() => {
-   handleHeightOfPages();
-}, 50);
+    function animate() {
+        handleHeightOfPages();
+        requestAnimationFrame(animate);
+     }
+     
+     animate();
+     
 
 
 
